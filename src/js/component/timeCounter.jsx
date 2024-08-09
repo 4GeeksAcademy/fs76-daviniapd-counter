@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from 'prop-types';
+import "./styles.css";
 
-const SecondsCounter = () => {
+const TimeCounter = () => {
     const [counter, setCounter] = useState(0);
 
     useEffect(() => {
@@ -28,18 +29,21 @@ const SecondsCounter = () => {
 
     return (
         <>
-            <div className="d-flex justify-content-center m-5 bg-warning" style={{ fontSize: "100px" }}>
+            <div className="d-flex justify-content-center m-5 bg-warning">
             <div className="row w-100 text-center">
-                <div className="col-3 d-flex align-items-center justify-content-center"><i className="fa-solid fa-stopwatch"></i></div>
+                <div className="col-3 d-flex align-items-center justify-content-center p-2"><i className="fa-solid fa-stopwatch" id="icon"></i></div>
 
-                    <div className="col-3">hours
-                        <div>{six % 10}{five % 10}</div>
+                    <div className="col-3">
+                    <div className="text">hours</div> 
+                        <div className="numbers">{six % 10}{five % 10}</div>
                     </div>
-                    <div className="col-3">min
-                        <div>{four % 10}{three % 10}</div>
+                    <div className="col-3">
+                    <div className="text">minutes</div> 
+                        <div className="numbers">{four % 10}{three % 10}</div>
                     </div>
-                    <div className="col-3">seg
-                        <div>{two % 10}{one % 10}</div>
+                    <div className="col-3">
+                        <div className="text">seconds</div> 
+                        <div className="numbers">{two % 10}{one % 10}</div>
                     </div>
                 </div>
             </div>
@@ -47,7 +51,7 @@ const SecondsCounter = () => {
     );
 };
 
-SecondsCounter.propTypes = {
+TimeCounter.propTypes = {
     digitOne: PropTypes.number,
     digitTwo: PropTypes.number,
     digitThree: PropTypes.number,
@@ -56,4 +60,4 @@ SecondsCounter.propTypes = {
     digitSix: PropTypes.number
 };
 
-export default SecondsCounter;
+export default TimeCounter;

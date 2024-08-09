@@ -1,0 +1,19 @@
+
+@import url('https://fonts.cdnfonts.com/css/digital-7-mono');
+
+#icon {
+  font-size: 200px;
+
+
+}
+.text {
+  font-size: 50px;
+  font-family: 'Digital-7', sans-serif;
+  margin-top: 50px;
+}
+
+.numbers{
+  font-size: 200px;
+  font-family: 'Digital-7', sans-serif;
+  display: inline-flex;
+}
